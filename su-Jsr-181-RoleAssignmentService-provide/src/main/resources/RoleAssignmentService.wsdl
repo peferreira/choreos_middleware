@@ -47,7 +47,7 @@
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="RoleAssignmentServiceSOAP" type="tns:RoleAssignmentService">
-    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="assignRole">
       <soap:operation soapAction="http://middleware.choreos.ccsl.ime.usp.br/RoleAssignmentService/NewOperation"/>
       <wsdl:input>
