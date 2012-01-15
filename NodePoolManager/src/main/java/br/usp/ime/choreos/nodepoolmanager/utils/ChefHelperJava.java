@@ -15,7 +15,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.io.Files;
 import com.google.inject.Module;
 
-public class ChefHelper {
+public class ChefHelperJava {
 
     private static final String client = Configuration.get("CHEF_USER");
     private static final String pemFile = Configuration.get("CHEF_USER_KEY_FILE");

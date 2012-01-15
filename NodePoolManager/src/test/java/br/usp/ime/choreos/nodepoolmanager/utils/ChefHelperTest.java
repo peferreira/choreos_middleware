@@ -10,7 +10,7 @@ public class ChefHelperTest {
 
     @Test
     public void testChefContext() throws Exception {
-        Role role = ChefHelper.getChefContext().getApi().getRole("petals");
+        Role role = new ChefHelper().getChefContext().getApi().getRole("petals");
         assertEquals("petals", role.getName());
     }
 }
