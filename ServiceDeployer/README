@@ -2,6 +2,7 @@ Requirements
 ============
 
 - Maven 3
+- OpenVPN 2 (when using OpenStack)
 
 About how to compile, see the INSTALL file.
 
@@ -12,6 +13,22 @@ $ mvn -Declipse.workspace=/path/to/your/workspace eclipse:configure-workspace
 $ mvn -Declipse.workspace=/path/to/your/workspace eclipse:eclipse
 
 The first one only needs to be run once per workspace. Then import existent project in Eclipse IDE. If you find many compiler erros change the compiler version to 1.6 (also search for facets in project -> properties)
+
+OpenVPN (for OpenStack)
+===========
+
+Install OpenVPN 2.
+
+Create a folder and unpack the access files received from the OpenVPN administrator. 
+The files should be:
+ca.crt, <username>.crt, <username>.csr, <username>.key, openvpn.conf
+
+Note: For MACOSX, TUN/TAP devices are needed. Install it from http://tuntaposx.sourceforge.net/.
+
+Execute this on commandline while on the folder that was just created:
+sudo openvpn2 --config openvpn.conf
+
+OpenVPN will connect to the server. Wait until the connection successful message appears before trying to use OpenStack.
 
 Configuring a Local VM for Faster and Cheaper Tests
 ===================================================
